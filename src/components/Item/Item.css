@@ -1,0 +1,17 @@
+.item-wrapper {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.item-name {
+  flex-basis: 80%;
+  font-size: x-large;
+}
+
+.item-quantity {
+  font-size: x-large;
+  color: royalblue;
+}
