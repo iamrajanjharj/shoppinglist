@@ -1,6 +1,10 @@
 //CSS Imports
 import "./ItemList.css";
 
+//FontAwesome Imports
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+
 //Components Import
 import Item from "../Item/Item";
 
@@ -10,7 +14,15 @@ function ItemList({ shoppingItems }) {
       {shoppingItems &&
         shoppingItems.map((item) => {
           return (
-            <Item itemName={item.name} key={item.id} quantity={item.quantity} />
+            <div key={item.id} className="items-list">
+              <div className="change-quantity add-item">
+                <FontAwesomeIcon icon={faPlus} />
+              </div>
+              <Item itemName={item.name} quantity={item.quantity} />
+              <div className="change-quantity remove-item">
+                <FontAwesomeIcon icon={faMinus} />
+              </div>
+            </div>
           );
         })}
     </div>
