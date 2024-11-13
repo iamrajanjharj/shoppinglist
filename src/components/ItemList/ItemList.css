@@ -23,6 +23,10 @@
   font-size: small;
 }
 
+.change-quantity:hover {
+  color: #000000;
+}
+
 .add-item {
   background-color: var(--light-purple);
 }

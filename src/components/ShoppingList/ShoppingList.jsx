@@ -2,6 +2,8 @@
 import Header from "../Header/Header";
 import InputItem from "../InputItem/InputItem";
 import ItemList from "../ItemList/ItemList";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 //CSS Imports
 import "./ShoppingList.css";
@@ -15,6 +17,7 @@ function ShoppingList() {
   return (
     <>
       <Header />
+      <ToastContainer />
       <div className="current-shopping-list">
         <InputItem />
         <ItemList shoppingItems={shoppingItems} />

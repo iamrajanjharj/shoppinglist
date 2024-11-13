@@ -8,6 +8,8 @@
 .item-name {
   flex-basis: 80%;
   font-size: x-large;
+  letter-spacing: 0.2rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .item-quantity {
