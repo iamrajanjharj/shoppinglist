@@ -1,0 +1,36 @@
+.item-input-wrapper {
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item-input {
+  width: 100%;
+  padding: 1.5rem;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.item-input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--light-purple);
+}
+
+.add-item-button {
+  width: 100px;
+  height: 40px;
+  background-color: var(--light-purple);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: 1.5px 1.5px gray;
+}
+
+.add-item-button:hover {
+  box-shadow: none;
+}
