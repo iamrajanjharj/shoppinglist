@@ -4,13 +4,28 @@ import "./InputItem.css";
 //UTILS Imports
 import { showSuccess } from "../../utils/showToasts";
 
-function InputItem() {
+//COMPONENTS Imports
+import { useState } from "react";
+
+function InputItem({ addItem }) {
+  const [itemName, setItemName] = useState("");
+
   return (
     <div className="item-input-wrapper">
-      <input className="item-input" type="text" placeholder="Add an item..." />
+      <input
+        className="item-input"
+        type="text"
+        placeholder="Add an item..."
+        value={itemName}
+        onChange={(e) => setItemName(e.target.value)}
+      />
       <button
         className="add-item-button"
-        onClick={() => showSuccess("Item added successfully")}
+        onClick={() => {
+          addItem(itemName);
+          setItemName("");
+          showSuccess(`Item ${itemName} added successfully`);
+        }}
       >
         Add
       </button>

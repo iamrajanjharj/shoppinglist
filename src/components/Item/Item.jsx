@@ -1,6 +1,9 @@
 //CSS Imports
 import "./Item.css";
 
+//Component Imports
+import React from "react";
+
 function Item({ itemName, quantity }) {
   return (
     <div className="item-wrapper">
@@ -10,4 +13,4 @@ function Item({ itemName, quantity }) {
   );
 }
 
-export default Item;
+export default React.memo(Item);
